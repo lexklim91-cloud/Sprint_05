@@ -36,14 +36,13 @@ class TestsCreatingAnAd:
       driver.find_element(*Locators.ad_condition_radio).click()
 
       driver.find_element(*Locators.ad_category_dropdown).click()
-      driver.find_element(*Locators.category).click() 
- 
       driver.find_element(*Locators.ad_city_dropdown).click()
-      city = driver.find_element(*Locators.city).click()
+      
+      driver.find_element(*Locators.category).click()       
+      driver.find_element(*Locators.city).click()
         
       driver.find_element(*Locators.publish_buttom).click()
 
       WebDriverWait(driver, 2).until(expected_conditions.invisibility_of_element_located((Locators.publish_buttom)))
       driver.find_element(By.CSS_SELECTOR, "button.circleSmall").click()
       assert driver.find_elements(By.CLASS_NAME, "card") != 0
-      driver.quit()

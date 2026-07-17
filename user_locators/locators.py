@@ -4,7 +4,7 @@ class Locators:
 
     # Кнопки
     LOGIN_REGISTER_BUTTON = (By.CSS_SELECTOR, "button.buttonSecondary")# кнопка "Вход и регистрация" 
-    no_account_button = (By.XPATH, "//*[@id='root']/div/div[2]/div[5]/form/div[3]/button[2]")# кнопка "Нет аккаунта"
+    no_account_button = (By.XPATH, ".//button[text()='Нет аккаунта']")# кнопка "Нет аккаунта"
     create_account_button = (By.CSS_SELECTOR, "form .buttonPrimary")# кнопка "Создать аккаунт" 
     login_button = (By.CSS_SELECTOR, "form .buttonPrimary")# кнопка "Войти" 
     logout_button = (By.CSS_SELECTOR, ".btnSmall")# кнопка "Выйти" 
@@ -19,7 +19,7 @@ class Locators:
 
     
     user_name_and_avatar = (By.CSS_SELECTOR, ".circleSmall")
-    name_user = (By.XPATH, "//*[@id='root']/div/div[1]/div/div[1]/div/h3")
+    name_user = (By.CLASS_NAME , "profileText")
     
     
     # Сообщения об ошибках
@@ -31,13 +31,13 @@ class Locators:
     form_add_post = (By.CSS_SELECTOR, ".createListing")
     
     ad_name_input = (By.NAME, "name") #«Название»
-    ad_description_input = (By.XPATH, "/html/body/div/div/div[2]/div/form/div[4]/div/textarea") # "Описание товара" 
+    ad_description_input = (By.CLASS_NAME, "textarea_inputStandart__IoNxq") # "Описание товара" 
     price = (By.NAME, "price") #«Стоимость» 
-    ad_category_dropdown  =  (By.XPATH, "/html/body/div/div/div[2]/div/form/div[2]/div[2]/div[1]/button") # "Категорию" 
-    ad_city_dropdown = (By.XPATH, "//*[@id='root']/div/div[2]/div/form/div[2]/div[2]/div[2]/button[1]") # "Город"
+    ad_category_dropdown  =  (By.CLASS_NAME, "dropDownMenu_arrowDown__pfGL1") # "Категорию" 
+    ad_city_dropdown = (By.CLASS_NAME, "dropDownMenu_arrowDown__pfGL1") # "Город"
     ad_condition_radio = (By.CSS_SELECTOR, ".radioUnput_inputRegular__FbVbr")
     
     
-    category = (By.XPATH, "/html/body/div/div/div[2]/div/form/div[3]/div[1]/button")
-    city = (By.XPATH, f"//*[@id='root']/div/div[2]/div/form/div[3]/div[2]/button[5]")
+    category = (By.XPATH, "//button[contains(., 'Авто')]")
+    city = (By.XPATH, "//button[contains(., 'Нижний Новгород')]")
   

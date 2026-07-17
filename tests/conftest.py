@@ -1,5 +1,6 @@
 import pytest
 import random
+import tests.data as data
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -7,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 @pytest.fixture()
 def driver():
     driver = webdriver.Chrome()
-    driver.get("https://qa-desk.education-services.ru/")
+    driver.get(data.url)
     yield driver
     driver.quit()
 
